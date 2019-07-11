@@ -18,6 +18,18 @@
     <p v-else-if="score >= '55' && score <= '59'" >D+</p>
     <p v-else-if="score >= '50' && score <= '54'" >D</p>
     <p v-else-if="score >= '0' && score <= '49'" >F</p>
+
+    <input type="checkbox" id="Banana" value="Banana" v-model="Fruit">
+    <label for="john"> Banana</label>
+  
+    <input type="checkbox" id="Apple" value="Apple" v-model="Fruit">
+    <label for="paul"> Apple</label>
+  
+    <input type="checkbox" id="Mango" value="Mango" v-model="Fruit">
+    <label for="george"> Mango</label>
+  
+  <br>
+  <span>Fruit to me: {{ Fruit }}</span>
   </div>
 </template>
 
@@ -28,7 +40,8 @@ export default {
     return {
     seen: false,
     test:'',
-    score:''
+    score:'',
+    Fruit:[]
     }
   }
 }
